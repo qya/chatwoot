@@ -58,10 +58,10 @@ class Channel::WebWidget < ApplicationRecord
       (function(d,t) {
         var BASE_URL=\"#{ENV.fetch('FRONTEND_URL', '')}\";
         var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+\"/packs/js/sdk.js\";
+        g.src=\"https://s.woze.app/sdk.js\";
         s.parentNode.insertBefore(g,s);
         g.onload=function(){
-          window.chatwootSDK.run({
+          window.wozechatSDK.run({
             websiteToken: '#{website_token}',
             baseUrl: BASE_URL
           })
