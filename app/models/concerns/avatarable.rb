@@ -13,7 +13,7 @@ module Avatarable
 
     if [User, Contact].include?(self.class) && email.present?
       hash = Digest::MD5.hexdigest(email)
-      return "https://www.gravatar.com/avatar/#{hash}?d=404"
+      return "https://avatars.dicebear.com/api/initials/#{hash}.svg"
     end
 
     ''
